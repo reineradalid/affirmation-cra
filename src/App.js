@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-
+import cat from "./img/cat.png"
+import { motion } from "framer-motion";
 const affirmations = [
   "Your supportive nature makes you unforgettable.",
     "There’s a glow in your kindness that lights up a room.",
@@ -33,21 +34,60 @@ const affirmations = [
     "You bring calm even to restless hearts."
 ];
 
-function App() {
+// Random colors for backgrounds
+const colors = ["#B5FFFC"];
+
+// Some cat images (you can replace with your own hosted cat images)
+const cats = [
+cat
+];
+
+export default function App() {
   const [affirmation, setAffirmation] = useState("");
+  const [bgColor, setBgColor] = useState("#fff");
+  const [catImage, setCatImage] = useState("");
 
   useEffect(() => {
-    const random = affirmations[Math.floor(Math.random() * affirmations.length)];
-    setAffirmation(random);
+    // Pick random affirmation
+    const randomAff = affirmations[Math.floor(Math.random() * affirmations.length)];
+    setAffirmation(randomAff);
+
+    // Pick random background color
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    setBgColor(randomColor);
+
+    // Pick random cat image
+    const randomCat = cats[Math.floor(Math.random() * cats.length)];
+    setCatImage(randomCat);
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen p-4">
-      <div className="bg-white/20 backdrop-blur-md rounded-2xl shadow-lg p-8 w-lg text-center">
-        <h1 className="text-2xl font-semibold text-black">{affirmation}</h1>
-      </div>
+    <div
+      className="flex items-center justify-center min-h-screen"
+      style={{ backgroundColor: bgColor }}
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        className="p-6 rounded-2xl bg-white shadow-xl flex flex-col items-center"
+      >
+    <div className="relative flex items-center justify-center">
+  {/* Cat image */}
+  <img
+    src={catImage}
+    alt="Cat"
+    className="rounded-2xl object-cover w-[calc(1.6*226px)] h-[calc(1.6*228px)]"
+  />
+
+  {/* Card overlay */}
+  <div className="absolute bottom-11 left-1/2 -translate-x-1/2 transform w-[224px] h-[128px] flex items-center justify-center px-4 py-2 bg-transparent">
+    <p className="text-center font-semibold text-gray-700">
+      {affirmation}
+    </p>
+  </div>
+</div>
+      </motion.div>
     </div>
   );
 }
-
-export default App;

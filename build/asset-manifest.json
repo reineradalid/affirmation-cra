@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/affirmation-cra/static/css/main.22e5da7a.css",
-    "main.js": "/affirmation-cra/static/js/main.2206eccf.js",
+    "main.css": "/affirmation-cra/static/css/main.7445dd01.css",
+    "main.js": "/affirmation-cra/static/js/main.d93a2691.js",
     "index.html": "/affirmation-cra/index.html",
-    "main.22e5da7a.css.map": "/affirmation-cra/static/css/main.22e5da7a.css.map",
-    "main.2206eccf.js.map": "/affirmation-cra/static/js/main.2206eccf.js.map"
+    "main.7445dd01.css.map": "/affirmation-cra/static/css/main.7445dd01.css.map",
+    "main.d93a2691.js.map": "/affirmation-cra/static/js/main.d93a2691.js.map"
   },
   "entrypoints": [
-    "static/css/main.22e5da7a.css",
-    "static/js/main.2206eccf.js"
+    "static/css/main.7445dd01.css",
+    "static/js/main.d93a2691.js"
   ]
 }
