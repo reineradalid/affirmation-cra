@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/affirmation-cra/static/css/main.05897e95.css",
+    "main.js": "/affirmation-cra/static/js/main.ffefa9b6.js",
+    "index.html": "/affirmation-cra/index.html",
+    "main.05897e95.css.map": "/affirmation-cra/static/css/main.05897e95.css.map",
+    "main.ffefa9b6.js.map": "/affirmation-cra/static/js/main.ffefa9b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05897e95.css",
+    "static/js/main.ffefa9b6.js"
+  ]
+}
