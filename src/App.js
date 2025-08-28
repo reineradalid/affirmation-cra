@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="flex items-center justify-center h-screen p-4">
       <div className="bg-white/20 backdrop-blur-md rounded-2xl shadow-lg p-8 w-lg text-center">
-        <h1 className="text-2xl font-semibold text-white">{affirmation}</h1>
+        <h1 className="text-2xl font-semibold text-black">{affirmation}</h1>
       </div>
     </div>
   );
